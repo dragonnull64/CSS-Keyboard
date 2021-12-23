@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    font-family: consolas;
+    user-select: none;
+    white-space: nowrap;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #232323;
+}
+
+.keyboard__row {
+    display: inline-block;
+}
+
+.keyboard__row>* {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 8px 15px;
+    margin: -0.5px -2px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #282828, #202020);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), 0 0 0 2px rgba(0, 0, 0, 0.75), 10px 20px 25px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.keyboard__row>*::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg, #232323, #4a4a4a);
+    border-radius: 10px;
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25), 10px 5px 10px rgba(0, 0, 0, 0.15);
+    border-left: 1px solid#0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+}
+
+.keyboard__row>div[data-pressed],
+.keyboard__row>div:active {
+    display: inline-block;
+    background: #2a2a2a;
+    position: relative;
+    top: 0.2em;
+}
+
+.key--1_25U {
+    width: 100px;
+}
+
+.key--1_5U {
+    width: 120px;
+}
+
+.key--1_75U {
+    width: 140px;
+}
+
+.key--2U {
+    width: 160px;
+}
+
+.key--2_25U {
+    width: 180px;
+}
+
+.key--2_75U {
+    width: 220px;
+}
+
+.key--6_25U {
+    width: 500px;
+}
+
+.key--double>* {
+    font-style: normal;
+    font-size: 20px;
+    position: relative;
+    color: #fff;
+}
+
+.key--letter>* {
+    font-style: normal;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.key--word>* {
+    font-style: normal;
+    font-size: 20px;
+    position: relative;
+    color: #fff;
+}
